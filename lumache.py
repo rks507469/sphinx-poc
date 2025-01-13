@@ -12,5 +12,9 @@ def get_random_ingredients(kind=None):
     return ['shells', 'gorgonzola', 'parsley']
 
 class InvalidKindError(Exception):
-    """Raised if the kind is invalid."""
+    """
+    Raised if the kind is invalid.
+
+    Adding line to commit
+    """
     pass
