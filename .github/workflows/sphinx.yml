@@ -8,18 +8,24 @@ jobs:
     permissions:
       contents: write
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
       with:
         persist-credentials: false
+
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt
+
     - name: Build HTML
-      uses: ammaraskar/sphinx-action@master
-      run: make html
+      run: sphinx-build -b html docs/ docs/build/html
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: html-docs
         path: docs/build/html/
-    - name: Deploy
+
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
       with:
