@@ -1,5 +1,3 @@
->>> import lumache
-
 API
 ===
 
