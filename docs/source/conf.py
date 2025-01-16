@@ -11,9 +11,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Lumache'
-copyright = '2025, Graziella'
-author = 'Graziella'
-release = '0.1'
+copyright = '2025, ArcOne AI'
+author = 'Mohd Aslam'
+release = '1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -35,3 +35,7 @@ exclude_patterns = []
 
 html_theme = 'furo'
 html_static_path = ['_static']
+html_theme_options = {
+    "light_logo" : "arconeLogo.png",
+    "dark_logo" : "arconeLogo.png",
+}

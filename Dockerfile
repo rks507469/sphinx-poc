@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY docs /app/docs
 
+COPY lumache.py /app/lumache.py
+
 EXPOSE 8000/tcp
 
 COPY start.sh /app/start.sh
