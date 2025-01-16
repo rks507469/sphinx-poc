@@ -1,5 +1,3 @@
->>> import lumache
-
 Usage
 =====
 
@@ -18,7 +16,7 @@ Creating recipes
 ----------------
 
 To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+you can use the :py:func:`lumache.get_random_ingredients()` function:
 
 .. autofunction:: lumache.get_random_ingredients(kind=None)
 
